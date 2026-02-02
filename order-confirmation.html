@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Confirmation - ColorShop</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <h1>🌈 ColorShop</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="nav-icons">
+                <a href="cart.html" class="cart-icon">
+                    🛒 <span class="cart-count" id="cartCount">0</span>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Confirmation Content -->
+    <section class="confirmation-section">
+        <div class="container">
+            <div class="confirmation-container">
+                <div class="success-animation">
+                    <div class="success-icon">✓</div>
+                </div>
+                
+                <h1>🎉 Order Confirmed!</h1>
+                <p class="confirmation-subtitle">Thank you for your colorful purchase!</p>
+                <div class="order-number" id="orderNumber">Order #: Loading...</div>
+                
+                <div class="timeline">
+                    <h3>📦 What Happens Next?</h3>
+                    <div class="timeline-steps">
+                        <div class="timeline-step completed">
+                            <div class="timeline-step-icon">✓</div>
+                            <div class="timeline-step-content">
+                                <h4>Order Confirmed</h4>
+                                <p>We've received your order!</p>
+                            </div>
+                        </div>
+                        <div class="timeline-step">
+                            <div class="timeline-step-icon">📦</div>
+                            <div class="timeline-step-content">
+                                <h4>Processing</h4>
+                                <p>Preparing your items (1-2 days)</p>
+                            </div>
+                        </div>
+                        <div class="timeline-step">
+                            <div class="timeline-step-icon">🚚</div>
+                            <div class="timeline-step-content">
+                                <h4>Shipped</h4>
+                                <p>On its way to you!</p>
+                            </div>
+                        </div>
+                        <div class="timeline-step">
+                            <div class="timeline-step-icon">🎁</div>
+                            <div class="timeline-step-content">
+                                <h4>Delivered</h4>
+                                <p>Arrives in 5-7 business days</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="order-details-card">
+                    <div class="order-section">
+                        <h3>📬 Shipping Information</h3>
+                        <div id="shippingInfo" class="info-grid">
+                            <!-- Shipping info will be loaded here -->
+                        </div>
+                    </div>
+                    
+                    <div class="order-section">
+                        <h3>🛍️ Order Items</h3>
+                        <div class="order-items-list" id="orderItemsList">
+                            <!-- Order items will be loaded here -->
+                        </div>
+                    </div>
+                    
+                    <div class="order-section">
+                        <h3>💰 Order Summary</h3>
+                        <div id="orderSummary" class="summary-table">
+                            <!-- Order summary will be loaded here -->
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="confirmation-message">
+                    <p>📧 A confirmation email has been sent to your inbox!</p>
+                    <p>📱 Track your order anytime from your email.</p>
+                </div>
+                
+                <div class="action-buttons">
+                    <a href="products.html" class="btn btn-primary">Continue Shopping 🛍️</a>
+                    <button onclick="window.print()" class="btn btn-secondary">Print Receipt 🖨️</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>🌈 ColorShop</h3>
+                    <p>Your vibrant online shopping destination where quality meets color!</p>
+                    <div class="social-icons">
+                        <a href="#" class="social-icon">📘</a>
+                        <a href="#" class="social-icon">📷</a>
+                        <a href="#" class="social-icon">🐦</a>
+                        <a href="#" class="social-icon">💼</a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">🏠 Home</a></li>
+                        <li><a href="products.html">🛍️ Products</a></li>
+                        <li><a href="about.html">ℹ️ About Us</a></li>
+                        <li><a href="contact.html">📞 Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Customer Care</h4>
+                    <ul>
+                        <li><a href="#">❓ FAQ</a></li>
+                        <li><a href="#">📦 Shipping</a></li>
+                        <li><a href="#">↩️ Returns</a></li>
+                        <li><a href="#">🔐 Privacy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <p>📧 support@colorshop.com</p>
+                    <p>📱 +1 (555) 123-4567</p>
+                    <p>📍 123 Rainbow Street, Color City</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 ColorShop. Made with 💜 for shopping lovers!</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const lastOrder = JSON.parse(localStorage.getItem('lastOrder'));
+            
+            if (!lastOrder) {
+                window.location.href = 'index.html';
+                return;
+            }
+            
+            // Display order number
+            document.getElementById('orderNumber').textContent = `Order #: ${lastOrder.orderNumber}`;
+            
+            // Display shipping information
+            const shippingInfo = document.getElementById('shippingInfo');
+            shippingInfo.innerHTML = `
+                <div class="info-item">
+                    <strong>Name:</strong>
+                    <span>${lastOrder.shipping.firstName} ${lastOrder.shipping.lastName}</span>
+                </div>
+                <div class="info-item">
+                    <strong>Email:</strong>
+                    <span>${lastOrder.shipping.email}</span>
+                </div>
+                <div class="info-item">
+                    <strong>Phone:</strong>
+                    <span>${lastOrder.shipping.phone}</span>
+                </div>
+                <div class="info-item full-width">
+                    <strong>Address:</strong>
+                    <span>${lastOrder.shipping.address}, ${lastOrder.shipping.city}, ${lastOrder.shipping.state} ${lastOrder.shipping.zipCode}</span>
+                </div>
+            `;
+            
+            // Display order items
+            const orderItemsList = document.getElementById('orderItemsList');
+            lastOrder.items.forEach(item => {
+                const itemDiv = document.createElement('div');
+                itemDiv.className = 'order-item';
+                itemDiv.innerHTML = `
+                    <div class="order-item-icon">${item.image}</div>
+                    <div class="order-item-details">
+                        <div class="order-item-name">${item.name}</div>
+                        <div class="order-item-qty">Quantity: ${item.quantity}</div>
+                    </div>
+                    <div class="order-item-price">$${(item.price * item.quantity).toFixed(2)}</div>
+                `;
+                orderItemsList.appendChild(itemDiv);
+            });
+            
+            // Display order summary
+            const orderSummary = document.getElementById('orderSummary');
+            orderSummary.innerHTML = `
+                <div class="summary-row">
+                    <span>Subtotal:</span>
+                    <span>$${lastOrder.totals.subtotal}</span>
+                </div>
+                <div class="summary-row">
+                    <span>Shipping:</span>
+                    <span>$${lastOrder.totals.shipping}</span>
+                </div>
+                <div class="summary-row">
+                    <span>Tax:</span>
+                    <span>$${lastOrder.totals.tax}</span>
+                </div>
+                <div class="summary-divider"></div>
+                <div class="summary-row total-row">
+                    <span>Total:</span>
+                    <span>$${lastOrder.totals.total}</span>
+                </div>
+            `;
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - ColorShop</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <h1>🌈 ColorShop</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+            </ul>
+            <div class="nav-icons">
+                <a href="cart.html" class="cart-icon">
+                    🛒 <span class="cart-count" id="cartCount">0</span>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header contact-header">
+        <div class="container">
+            <h1>📞 Contact Us</h1>
+            <p>We'd love to hear from you! Let's chat! 💬</p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section">
+        <div class="container">
+            <div class="contact-layout">
+                <!-- Contact Form -->
+                <div class="contact-form-container">
+                    <h2>📧 Send us a Message</h2>
+                    <p class="form-description">Fill out the form below and we'll get back to you soon!</p>
+                    <form id="contactForm" class="contact-form">
+                        <div class="form-group">
+                            <label for="contactName">Your Name *</label>
+                            <input type="text" id="contactName" name="name" placeholder="John Doe" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="contactEmail">Email Address *</label>
+                            <input type="email" id="contactEmail" name="email" placeholder="john@example.com" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="contactPhone">Phone Number</label>
+                            <input type="tel" id="contactPhone" name="phone" placeholder="+1 (555) 123-4567">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="contactSubject">Subject *</label>
+                            <select id="contactSubject" name="subject" required>
+                                <option value="">Choose a subject</option>
+                                <option value="general">💬 General Inquiry</option>
+                                <option value="order">📦 Order Status</option>
+                                <option value="product">🛍️ Product Question</option>
+                                <option value="return">↩️ Returns & Refunds</option>
+                                <option value="technical">🔧 Technical Support</option>
+                                <option value="feedback">⭐ Feedback</option>
+                                <option value="other">❓ Other</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="contactMessage">Message *</label>
+                            <textarea id="contactMessage" name="message" rows="6" required placeholder="Tell us how we can help you..."></textarea>
+                        </div>
+                        
+                        <div class="form-group checkbox-group">
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="newsletter" id="newsletter">
+                                <span>📬 Subscribe to our newsletter for updates and special offers</span>
+                            </label>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary btn-block">Send Message 🚀</button>
+                    </form>
+                    <div id="contactFormMessage" class="form-message"></div>
+                </div>
+
+                <!-- Contact Information -->
+                <div class="contact-info-container">
+                    <h2>🌟 Get in Touch</h2>
+                    <p>We're here to help and answer any questions!</p>
+                    
+                    <div class="contact-cards">
+                        <div class="contact-card">
+                            <div class="contact-card-icon">📧</div>
+                            <h4>Email Us</h4>
+                            <p>support@colorshop.com</p>
+                            <p>sales@colorshop.com</p>
+                        </div>
+                        
+                        <div class="contact-card">
+                            <div class="contact-card-icon">📱</div>
+                            <h4>Call Us</h4>
+                            <p>+1 (555) 123-4567</p>
+                            <p>Mon-Fri: 9am - 6pm EST</p>
+                        </div>
+                        
+                        <div class="contact-card">
+                            <div class="contact-card-icon">📍</div>
+                            <h4>Visit Us</h4>
+                            <p>123 Rainbow Street</p>
+                            <p>Color City, CC 12345</p>
+                        </div>
+                        
+                        <div class="contact-card">
+                            <div class="contact-card-icon">🕐</div>
+                            <h4>Business Hours</h4>
+                            <p>Monday - Friday: 9am - 6pm</p>
+                            <p>Saturday: 10am - 4pm</p>
+                            <p>Sunday: Closed</p>
+                        </div>
+                    </div>
+                    
+                    <div class="social-section">
+                        <h4>🌐 Follow Us</h4>
+                        <div class="social-links-large">
+                            <a href="#" class="social-link-large facebook">📘 Facebook</a>
+                            <a href="#" class="social-link-large instagram">📷 Instagram</a>
+                            <a href="#" class="social-link-large twitter">🐦 Twitter</a>
+                            <a href="#" class="social-link-large linkedin">💼 LinkedIn</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>❓ Frequently Asked Questions</h2>
+                <p>Quick answers to common questions!</p>
+            </div>
+            <div class="faq-grid">
+                <div class="faq-card">
+                    <div class="faq-icon">🚚</div>
+                    <h4>How long does shipping take?</h4>
+                    <p>Standard shipping takes 5-7 business days. Express shipping is available for 2-3 day delivery!</p>
+                </div>
+                <div class="faq-card">
+                    <div class="faq-icon">↩️</div>
+                    <h4>What is your return policy?</h4>
+                    <p>We offer a 30-day return policy on most items. Products must be unused and in original packaging.</p>
+                </div>
+                <div class="faq-card">
+                    <div class="faq-icon">🌍</div>
+                    <h4>Do you ship internationally?</h4>
+                    <p>Yes! We ship to most countries worldwide. International shipping times vary by location.</p>
+                </div>
+                <div class="faq-card">
+                    <div class="faq-icon">📦</div>
+                    <h4>How can I track my order?</h4>
+                    <p>Once your order ships, you'll receive a tracking number via email to monitor your delivery status.</p>
+                </div>
+                <div class="faq-card">
+                    <div class="faq-icon">💳</div>
+                    <h4>What payment methods do you accept?</h4>
+                    <p>We accept credit/debit cards, PayPal, and cash on delivery for select locations.</p>
+                </div>
+                <div class="faq-card">
+                    <div class="faq-icon">🎁</div>
+                    <h4>Do you offer gift wrapping?</h4>
+                    <p>Yes! We offer gift wrapping services for a small additional fee. Just select the option at checkout!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>🌈 ColorShop</h3>
+                    <p>Your vibrant online shopping destination where quality meets color!</p>
+                    <div class="social-icons">
+                        <a href="#" class="social-icon">📘</a>
+                        <a href="#" class="social-icon">📷</a>
+                        <a href="#" class="social-icon">🐦</a>
+                        <a href="#" class="social-icon">💼</a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">🏠 Home</a></li>
+                        <li><a href="products.html">🛍️ Products</a></li>
+                        <li><a href="about.html">ℹ️ About Us</a></li>
+                        <li><a href="contact.html">📞 Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Customer Care</h4>
+                    <ul>
+                        <li><a href="#">❓ FAQ</a></li>
+                        <li><a href="#">📦 Shipping</a></li>
+                        <li><a href="#">↩️ Returns</a></li>
+                        <li><a href="#">🔐 Privacy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <p>📧 support@colorshop.com</p>
+                    <p>📱 +1 (555) 123-4567</p>
+                    <p>📍 123 Rainbow Street, Color City</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 ColorShop. Made with 💜 for shopping lovers!</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="contact.js"></script>
+</body>
+</html>

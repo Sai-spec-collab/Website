@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products - ColorShop</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <h1>🌈 ColorShop</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html" class="active">Products</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="nav-icons">
+                <a href="cart.html" class="cart-icon">
+                    🛒 <span class="cart-count" id="cartCount">0</span>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header products-header">
+        <div class="container">
+            <h1>🛍️ Our Products</h1>
+            <p>Discover amazing products in vibrant colors!</p>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="products-section">
+        <div class="container">
+            <div class="products-layout">
+                <!-- Filters Sidebar -->
+                <aside class="filters-sidebar">
+                    <div class="filter-header">
+                        <h3>🎨 Filters</h3>
+                    </div>
+                    
+                    <div class="filter-group">
+                        <h4>📂 Category</h4>
+                        <label class="filter-option">
+                            <input type="radio" name="category" value="all" checked>
+                            <span class="filter-label">All Products</span>
+                        </label>
+                        <label class="filter-option">
+                            <input type="radio" name="category" value="electronics">
+                            <span class="filter-label">💻 Electronics</span>
+                        </label>
+                        <label class="filter-option">
+                            <input type="radio" name="category" value="fashion">
+                            <span class="filter-label">👗 Fashion</span>
+                        </label>
+                        <label class="filter-option">
+                            <input type="radio" name="category" value="home">
+                            <span class="filter-label">🏠 Home & Living</span>
+                        </label>
+                        <label class="filter-option">
+                            <input type="radio" name="category" value="sports">
+                            <span class="filter-label">⚽ Sports</span>
+                        </label>
+                    </div>
+
+                    <div class="filter-group">
+                        <h4>💰 Price Range</h4>
+                        <label class="filter-option">
+                            <input type="radio" name="price" value="all" checked>
+                            <span class="filter-label">All Prices</span>
+                        </label>
+                        <label class="filter-option">
+                            <input type="radio" name="price" value="0-50">
+                            <span class="filter-label">Under $50</span>
+                        </label>
+                        <label class="filter-option">
+                            <input type="radio" name="price" value="50-100">
+                            <span class="filter-label">$50 - $100</span>
+                        </label>
+                        <label class="filter-option">
+                            <input type="radio" name="price" value="100-500">
+                            <span class="filter-label">$100 - $500</span>
+                        </label>
+                        <label class="filter-option">
+                            <input type="radio" name="price" value="500+">
+                            <span class="filter-label">$500+</span>
+                        </label>
+                    </div>
+
+                    <button class="btn btn-primary btn-block" id="applyFilters">Apply Filters 🔍</button>
+                    <button class="btn btn-secondary btn-block" id="resetFilters">Reset All 🔄</button>
+                </aside>
+
+                <!-- Products Grid -->
+                <div class="products-main">
+                    <div class="products-header-bar">
+                        <div class="product-count-badge">
+                            <span id="productCount">Showing all products</span>
+                        </div>
+                        <select id="sortBy" class="sort-select">
+                            <option value="default">🔤 Sort by: Default</option>
+                            <option value="price-low">💵 Price: Low to High</option>
+                            <option value="price-high">💰 Price: High to Low</option>
+                            <option value="name">🔤 Name: A to Z</option>
+                        </select>
+                    </div>
+                    
+                    <div class="products-grid" id="productsGrid">
+                        <!-- Products will be loaded here by JavaScript -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>🌈 ColorShop</h3>
+                    <p>Your vibrant online shopping destination where quality meets color!</p>
+                    <div class="social-icons">
+                        <a href="#" class="social-icon">📘</a>
+                        <a href="#" class="social-icon">📷</a>
+                        <a href="#" class="social-icon">🐦</a>
+                        <a href="#" class="social-icon">💼</a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">🏠 Home</a></li>
+                        <li><a href="products.html">🛍️ Products</a></li>
+                        <li><a href="about.html">ℹ️ About Us</a></li>
+                        <li><a href="contact.html">📞 Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Customer Care</h4>
+                    <ul>
+                        <li><a href="#">❓ FAQ</a></li>
+                        <li><a href="#">📦 Shipping</a></li>
+                        <li><a href="#">↩️ Returns</a></li>
+                        <li><a href="#">🔐 Privacy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <p>📧 support@colorshop.com</p>
+                    <p>📱 +1 (555) 123-4567</p>
+                    <p>📍 123 Rainbow Street, Color City</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 ColorShop. Made with 💜 for shopping lovers!</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="products.js"></script>
+</body>
+</html>

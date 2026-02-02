@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ColorShop - Vibrant Online Store</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <h1>🌈 ColorShop</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="nav-icons">
+                <a href="cart.html" class="cart-icon">
+                    🛒 <span class="cart-count" id="cartCount">0</span>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">Welcome to ColorShop!</h1>
+            <p class="hero-subtitle">Where Shopping Meets Color & Joy 🎨</p>
+            <div class="hero-buttons">
+                <a href="products.html" class="btn btn-primary">Shop Now 🛍️</a>
+                <a href="about.html" class="btn btn-secondary">Learn More ✨</a>
+            </div>
+        </div>
+        <div class="hero-shapes">
+            <div class="shape shape-1"></div>
+            <div class="shape shape-2"></div>
+            <div class="shape shape-3"></div>
+        </div>
+    </section>
+
+    <!-- Featured Products -->
+    <section class="featured-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>⭐ Featured Products</h2>
+                <p>Check out our most popular items!</p>
+            </div>
+            <div class="products-grid" id="featuredProducts">
+                <!-- Products will be loaded here by JavaScript -->
+            </div>
+            <div class="text-center">
+                <a href="products.html" class="btn btn-gradient">View All Products 👉</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Categories Section -->
+    <section class="categories-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>🎯 Shop by Category</h2>
+                <p>Find exactly what you're looking for!</p>
+            </div>
+            <div class="category-grid">
+                <div class="category-card cat-electronics">
+                    <div class="category-icon">💻</div>
+                    <h3>Electronics</h3>
+                    <p>Latest tech gadgets</p>
+                    <a href="products.html?category=electronics" class="btn btn-small btn-primary">Browse 🔍</a>
+                </div>
+                <div class="category-card cat-fashion">
+                    <div class="category-icon">👗</div>
+                    <h3>Fashion</h3>
+                    <p>Trendy clothing & accessories</p>
+                    <a href="products.html?category=fashion" class="btn btn-small btn-secondary">Browse 🔍</a>
+                </div>
+                <div class="category-card cat-home">
+                    <div class="category-icon">🏠</div>
+                    <h3>Home & Living</h3>
+                    <p>Beautiful home decor</p>
+                    <a href="products.html?category=home" class="btn btn-small btn-success">Browse 🔍</a>
+                </div>
+                <div class="category-card cat-sports">
+                    <div class="category-icon">⚽</div>
+                    <h3>Sports & Fitness</h3>
+                    <p>Stay active & healthy</p>
+                    <a href="products.html?category=sports" class="btn btn-small btn-warning">Browse 🔍</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>✨ Why Choose ColorShop?</h2>
+                <p>We make shopping fun and easy!</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🚚</div>
+                    <h3>Free Shipping</h3>
+                    <p>On orders over $50</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🔒</div>
+                    <h3>Secure Payment</h3>
+                    <p>100% protected transactions</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🎁</div>
+                    <h3>Special Offers</h3>
+                    <p>Amazing deals every week</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">⭐</div>
+                    <h3>Quality Products</h3>
+                    <p>Handpicked items for you</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter-section">
+        <div class="container">
+            <div class="newsletter-content">
+                <h2>📧 Join Our Newsletter!</h2>
+                <p>Get exclusive deals and updates delivered to your inbox</p>
+                <form class="newsletter-form" id="newsletterForm">
+                    <input type="email" placeholder="Enter your email" required>
+                    <button type="submit" class="btn btn-primary">Subscribe 🎉</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>🌈 ColorShop</h3>
+                    <p>Your vibrant online shopping destination where quality meets color!</p>
+                    <div class="social-icons">
+                        <a href="#" class="social-icon">📘</a>
+                        <a href="#" class="social-icon">📷</a>
+                        <a href="#" class="social-icon">🐦</a>
+                        <a href="#" class="social-icon">💼</a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">🏠 Home</a></li>
+                        <li><a href="products.html">🛍️ Products</a></li>
+                        <li><a href="about.html">ℹ️ About Us</a></li>
+                        <li><a href="contact.html">📞 Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Customer Care</h4>
+                    <ul>
+                        <li><a href="#">❓ FAQ</a></li>
+                        <li><a href="#">📦 Shipping</a></li>
+                        <li><a href="#">↩️ Returns</a></li>
+                        <li><a href="#">🔐 Privacy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <p>📧 support@colorshop.com</p>
+                    <p>📱 +1 (555) 123-4567</p>
+                    <p>📍 123 Rainbow Street, Color City</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 ColorShop. Made with 💜 for shopping lovers!</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // Load featured products on homepage
+        document.addEventListener('DOMContentLoaded', function() {
+            const featuredContainer = document.getElementById('featuredProducts');
+            const products = getProducts().slice(0, 4);
+            
+            products.forEach(product => {
+                const productCard = createProductCard(product);
+                featuredContainer.appendChild(productCard);
+            });
+            
+            updateCartCount();
+
+            // Newsletter form
+            document.getElementById('newsletterForm').addEventListener('submit', function(e) {
+                e.preventDefault();
+                showNotification('🎉 Thanks for subscribing! Check your email for a welcome gift!');
+                this.reset();
+            });
+        });
+    </script>
+</body>
+</html>

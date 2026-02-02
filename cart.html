@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart - ColorShop</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <h1>🌈 ColorShop</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="nav-icons">
+                <a href="cart.html" class="cart-icon active">
+                    🛒 <span class="cart-count" id="cartCount">0</span>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header cart-header">
+        <div class="container">
+            <h1>🛒 Your Shopping Cart</h1>
+            <p>Review your colorful selections!</p>
+        </div>
+    </section>
+
+    <!-- Cart Section -->
+    <section class="cart-section">
+        <div class="container">
+            <div class="cart-layout">
+                <!-- Cart Items -->
+                <div class="cart-items-container">
+                    <div class="cart-items-header">
+                        <h2>🛍️ Cart Items</h2>
+                    </div>
+                    <div id="cartItemsContainer">
+                        <!-- Cart items will be loaded here -->
+                    </div>
+                    <div id="emptyCart" class="empty-cart" style="display: none;">
+                        <div class="empty-cart-icon">🛒</div>
+                        <h3>Your cart is empty!</h3>
+                        <p>Let's add some colorful products! 🌈</p>
+                        <a href="products.html" class="btn btn-primary">Browse Products 🛍️</a>
+                    </div>
+                </div>
+
+                <!-- Cart Summary -->
+                <div class="cart-summary-container">
+                    <div class="cart-summary">
+                        <h3>💰 Order Summary</h3>
+                        <div class="summary-row">
+                            <span>Subtotal:</span>
+                            <span id="subtotal">$0.00</span>
+                        </div>
+                        <div class="summary-row">
+                            <span>Shipping:</span>
+                            <span id="shipping">$10.00</span>
+                        </div>
+                        <div class="summary-row">
+                            <span>Tax (10%):</span>
+                            <span id="tax">$0.00</span>
+                        </div>
+                        <div class="summary-divider"></div>
+                        <div class="summary-row total-row">
+                            <span>Total:</span>
+                            <span id="total">$0.00</span>
+                        </div>
+                        
+                        <div class="promo-section">
+                            <h4>🎁 Have a Promo Code?</h4>
+                            <div class="promo-code">
+                                <input type="text" id="promoInput" placeholder="Enter code">
+                                <button class="btn btn-small btn-secondary" id="applyPromo">Apply</button>
+                            </div>
+                            <p id="promoMessage" class="promo-message"></p>
+                            <div class="promo-hints">
+                                <small>💡 Try: SAVE10, SAVE20, WELCOME</small>
+                            </div>
+                        </div>
+
+                        <a href="checkout.html" class="btn btn-primary btn-block" id="checkoutBtn">
+                            Proceed to Checkout 🎉
+                        </a>
+                        <a href="products.html" class="btn btn-secondary btn-block">
+                            Continue Shopping 🛍️
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>🌈 ColorShop</h3>
+                    <p>Your vibrant online shopping destination where quality meets color!</p>
+                    <div class="social-icons">
+                        <a href="#" class="social-icon">📘</a>
+                        <a href="#" class="social-icon">📷</a>
+                        <a href="#" class="social-icon">🐦</a>
+                        <a href="#" class="social-icon">💼</a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">🏠 Home</a></li>
+                        <li><a href="products.html">🛍️ Products</a></li>
+                        <li><a href="about.html">ℹ️ About Us</a></li>
+                        <li><a href="contact.html">📞 Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Customer Care</h4>
+                    <ul>
+                        <li><a href="#">❓ FAQ</a></li>
+                        <li><a href="#">📦 Shipping</a></li>
+                        <li><a href="#">↩️ Returns</a></li>
+                        <li><a href="#">🔐 Privacy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <p>📧 support@colorshop.com</p>
+                    <p>📱 +1 (555) 123-4567</p>
+                    <p>📍 123 Rainbow Street, Color City</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 ColorShop. Made with 💜 for shopping lovers!</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="cart.js"></script>
+</body>
+</html>
